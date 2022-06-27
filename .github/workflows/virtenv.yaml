@@ -20,8 +20,5 @@ jobs:
 
       # the package installation will only be executed when the
       # requirements-files have changed.
-    - run: pip install bentoml --pre
+    - run: pip install bentoml
       if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-
-    - name: Test
-      run: py.test
