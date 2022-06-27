@@ -1,4 +1,4 @@
-python=3.8
+python==3.8
 scikit-learn
 pandas
 bentoml>=1.0.0a
