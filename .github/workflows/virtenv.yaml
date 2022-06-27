@@ -22,6 +22,7 @@ jobs:
       # requirements-files have changed.
     - run: |
         pip install -r requirements.txt
+        python train.py
         bentoml build
         bentoml list
         
