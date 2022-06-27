@@ -19,7 +19,7 @@ jobs:
     - run: |
         pip install -r requirements.txt
         python train.py
-        bentoml build --version latest
+        bentoml build --version cicd
         bentoml list
-        #bentoml containerize iris_classifier:latest -t onvsoff/iris_cicd
-        #docker push onvsoff/iris_cicd
+        bentoml containerize iris_classifier:cicd -t onvsoff/iris_cicd
+        docker push onvsoff/iris_cicd
